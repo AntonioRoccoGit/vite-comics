@@ -104,7 +104,9 @@ export default {
         }
 
         li {
+            text-align: center;
             display: inline-block;
+            min-width: 30px;
             margin-right: 1rem;
             height: $header_height;
             line-height: $header_height;
