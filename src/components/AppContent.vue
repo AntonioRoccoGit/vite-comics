@@ -5,11 +5,20 @@ export default {
 </script>
 
 <template>
-    <h2>sono il contenuto</h2>
+    <section class="content">
+        <div class="container">
+            <p>---> il contenuto va qui &lt;---</p>
+
+        </div>
+
+    </section>
 </template>
 
 <style scoped lang="scss">
-* {
-    background-color: lightcoral;
+.content {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 2rem 0;
+
 }
 </style>

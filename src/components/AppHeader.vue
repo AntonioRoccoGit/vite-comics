@@ -62,19 +62,21 @@ export default {
 </script>
 
 <template>
-    <section class="header">
-        <div class="logo">
-            <a href="#">
-                <img src="../assets/img/dc-logo.png" alt="">
-            </a>
-        </div>
-        <div class="link">
-            <ul>
-                <li v-for="link in links" :class="{ active: link.active }"><a :href="link.url">{{ link.name }}</a></li>
-            </ul>
+    <div class="container">
+        <section class="header">
+            <div class="logo">
+                <a href="#">
+                    <img src="../assets/img/dc-logo.png" alt="">
+                </a>
+            </div>
+            <div class="link">
+                <ul>
+                    <li v-for="link in links" :class="{ active: link.active }"><a :href="link.url">{{ link.name }}</a></li>
+                </ul>
 
-        </div>
-    </section>
+            </div>
+        </section>
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -83,15 +85,19 @@ export default {
 .header {
     height: $header_height;
     display: flex;
-    min-width: 900px;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 6rem;
+
+    .logo img {
+        height: 60px;
+    }
 
     .link {
+        min-width: 600px;
+
         a {
             display: block;
-            height: 140px;
+            height: $header_height;
             text-decoration: none;
             color: inherit;
             text-transform: uppercase;
@@ -102,6 +108,8 @@ export default {
             margin-right: 1rem;
             height: $header_height;
             line-height: $header_height;
+            font-size: .6rem;
+            font-weight: 900;
 
             &.active,
             &:hover {

@@ -16,13 +16,10 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <AppHeader />
-    <AppContent />
-    <AppCallToAction />
-    <AppFooter />
-
-  </div>
+  <AppHeader />
+  <AppContent />
+  <AppCallToAction />
+  <AppFooter />
 </template>
 
 <style lang="scss">
