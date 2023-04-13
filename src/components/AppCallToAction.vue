@@ -93,8 +93,8 @@ export default {
         }
 
         img {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             object-fit: contain;
             // &.custom {
             //     object-fit: contain;
