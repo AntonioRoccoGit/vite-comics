@@ -5,11 +5,21 @@ export default {
 </script>
 
 <template>
-    <h2>sono call to action</h2>
+    <section class="call-to-action">
+        <div class="container">
+            sono call to action
+        </div>
+
+    </section>
 </template>
 
 <style scoped lang="scss">
-* {
-    background-color: rgb(194, 158, 158);
+@use "../style/partials/variables" as *;
+
+.call-to-action {
+    padding: 2rem 0;
+    position: relative;
+    background-color: $primary_blue;
+    z-index: 10;
 }
 </style>
