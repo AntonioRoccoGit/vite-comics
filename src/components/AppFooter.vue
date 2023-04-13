@@ -5,37 +5,113 @@ export default {
         return {
             footerLinks: {
                 "dc comics": [
-                    "characters",
-                    "Comics",
-                    "Movies",
-                    "TV",
-                    "Games",
-                    "Videos",
-                    "News"
+                    {
+                        name: "characters",
+                        url: "#"
+                    },
+                    {
+                        name: "Comics",
+                        url: "#"
+                    },
+                    {
+                        name: "Movies",
+                        url: "#"
+                    },
+                    {
+                        name: "TV",
+                        url: "#"
+                    },
+                    {
+                        name: "Games",
+                        url: "#"
+                    },
+                    {
+                        name: "Videos",
+                        url: "#"
+                    },
+                    {
+                        name: "News",
+                        url: "#"
+                    },
+
                 ],
                 "dc": [
-                    "Terms of Use",
-                    "Privacy policy(New)",
-                    "Ad Choices",
-                    "Adverstring",
-                    "Jobs",
-                    "Subscriptions",
-                    "Talent Workshops",
-                    "CPSC Certificates",
-                    "Ratings",
-                    "Shop Help",
-                    "Contact Us"
+                    {
+                        name: "Terms of Use",
+                        url: "#"
+                    },
+                    {
+                        name: "Privacy policy(New)",
+                        url: "#"
+                    },
+                    {
+                        name: "Ad Choices",
+                        url: "#"
+                    },
+                    {
+                        name: "Adverstring",
+                        url: "#"
+                    },
+                    {
+                        name: "Jobs",
+                        url: "#"
+                    },
+                    {
+                        name: "CPSC Certificates",
+                        url: "#"
+                    },
+                    {
+                        name: "Subscriptions",
+                        url: "#"
+                    },
+                    {
+                        name: "Talent Workshops",
+                        url: "#"
+                    },
+                    {
+                        name: "Ratings",
+                        url: "#"
+                    },
+                    {
+                        name: "Shop Help",
+                        url: "#"
+                    },
+                    {
+                        name: "Contact Us",
+                        url: "#"
+                    },
                 ],
                 "sites": [
-                    "DC",
-                    "MAD Magazine",
-                    "DC Kids",
-                    "DC Universe",
-                    "DC Power Visa"
+                    {
+                        name: "DC",
+                        url: "#"
+                    },
+                    {
+                        name: "MAD Magazine",
+                        url: "#"
+                    },
+                    {
+                        name: "DC Kids",
+                        url: "#"
+                    },
+                    {
+                        name: "DC Universe",
+                        url: "#"
+                    },
+                    {
+                        name: "DC Power Visa",
+                        url: "#"
+                    },
                 ],
                 "shop": [
-                    "Shop DC",
-                    "Shop DC Collectables"
+                    {
+                        name: "Shop DC",
+                        url: "#"
+                    },
+                    {
+                        name: "Shop DC Collectables",
+                        url: "#"
+                    },
                 ]
             },
             socialImg: [
@@ -80,7 +156,7 @@ export default {
                 <div v-for="(item, key) in footerLinks" class="card">
                     <h2>{{ key }}</h2>
                     <ul>
-                        <li v-for="link in item"><a href="">{{ link }}</a></li>
+                        <li v-for="link in item"><a :href="link.url">{{ link.name }}</a></li>
                     </ul>
                 </div>
             </div>
