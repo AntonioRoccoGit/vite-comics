@@ -1,11 +1,28 @@
 <script >
-export default {
+// components
+import AppHeader from './components/AppHeader.vue';
+import AppContent from './components/AppContent.vue';
+import AppCallToAction from './components/AppCallToAction.vue';
+import AppFooter from './components/AppFooter.vue';
 
+export default {
+  components: {
+    AppHeader,
+    AppContent,
+    AppCallToAction,
+    AppFooter
+  }
 }
 </script>
 
 <template>
-  <h2>ciao</h2>
+  <div class="container">
+    <AppHeader />
+    <AppContent />
+    <AppCallToAction />
+    <AppFooter />
+
+  </div>
 </template>
 
 <style lang="scss">
