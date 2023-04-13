@@ -38,6 +38,34 @@ export default {
                     "Shop DC Collectables"
                 ]
             },
+            socialImg: [
+                {
+                    img: "footer-facebook.png",
+                    url: "https://it-it.facebook.com"
+                },
+                {
+                    img: "footer-twitter.png",
+                    url: "https://twitter.com/?lang=it"
+                },
+                {
+                    img: "footer-youtube.png",
+                    url: "https://www.youtube.com"
+                },
+                {
+                    img: "footer-pinterest.png",
+                    url: "https://www.pinterest.it"
+                },
+                {
+                    img: "footer-periscope.png",
+                    url: "#"
+                },
+            ]
+        }
+    },
+    methods: {
+        getImgPath(name) {
+
+            return new URL(`../assets/img/${name.img}`, import.meta.url).href;
         }
     }
 
@@ -66,9 +94,15 @@ export default {
     <!-- footer bottom -->
     <section class="footer-bottom">
         <div class="container">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, quae deserunt tempore eius adipisci nobis
-            officia voluptatum incidunt, vel qui quidem ipsum. Nobis tempora itaque harum fugit est aspernatur quis.
-
+            <button>SIGN-UP NOW!</button>
+            <ul>
+                <li><a href="">FOLLOW US</a></li>
+                <li v-for="item in socialImg">
+                    <a :href="item.url">
+                        <img :src="getImgPath(item)" alt="">
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
     <!-- /footer bottom -->
@@ -129,9 +163,50 @@ export default {
 
 .footer-bottom {
     position: relative;
-    background-color: white;
+    background-color: $dark_bg_color;
     z-index: 10;
-    height: $header_height;
+    height: $footer_bottom_height;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            color: white;
+            background-color: inherit;
+            border: none;
+            padding: .8rem .6rem;
+            border: 1px solid $primary_blue;
+            cursor: pointer;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            li {
+                &:first-child {
+                    font-size: .7rem;
+                    font-weight: 600;
+                }
+
+                line-height: $footer_bottom_height;
+                margin-right: 1rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary_blue;
+
+                img {
+                    vertical-align: middle;
+                    width: 25px;
+                }
+            }
+        }
+    }
 }
 
 img {
