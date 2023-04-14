@@ -153,7 +153,7 @@ export default {
     <section class="footer-top">
         <div class="container">
             <div class="footer-top-link">
-                <div v-for="(item, key) in footerLinks" class="card">
+                <div v-for="(item, key) in footerLinks" :key="key" class="card">
                     <h2>{{ key }}</h2>
                     <ul>
                         <li v-for="link in item"><a :href="link.url">{{ link.name }}</a></li>
@@ -173,7 +173,7 @@ export default {
             <button>SIGN-UP NOW!</button>
             <ul>
                 <li><a href="">FOLLOW US</a></li>
-                <li v-for="item in socialImg">
+                <li v-for="(item, index) in socialImg" :key="index">
                     <a :href="item.url">
                         <img :src="getImgPath(item)" alt="">
                     </a>

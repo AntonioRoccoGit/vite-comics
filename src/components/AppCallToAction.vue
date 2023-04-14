@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppContent",
+    name: "AppCallToAction",
     data() {
         return {
             shopLinks: [
@@ -50,7 +50,7 @@ export default {
     <section class="call-to-action">
         <div class="container">
             <ul>
-                <li v-for="item in shopLinks">
+                <li v-for="(item, index) in shopLinks" :key="index">
                     <a :href="item.url">
                         <img :class="{ custom: item.custom }" :src="getImgPath(item)" alt="">
                         <h2>{{ item.title }}</h2>
